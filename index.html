@@ -9,7 +9,8 @@
 	</head>
 	<body>
 		<main ng-controller="tttController as tttCtrl">
-		<h1>The Winner is: {{tttCtrl.winner}}
+		<h1>The Winner is:<span ng-bind="tttCtrl.winner"></span><h1>
+		<h2>Player 1 Wins:<span class="numDisp" ng-bind="tttCtrl.p1Wins"></span> Player 2 Wins: <span class ="numDisp" ng-bind="tttCtrl.p2Wins"></span></h2>
 		<div class="gameSpace">
 			<div ng-click="tttCtrl.makeMove(square.index)" ng-repeat="square in tttCtrl.squares" class="square">
 				<img class="mark" id="X" ng-show="square.value===1" src="images/tttX.png">
@@ -17,7 +18,7 @@
 			</div>	
 		</div>
 			<br>
-			<input type="button" value="Clear Board" ng-click="tttCtrl.restart()">
+			<input type="button" value="New Game" ng-click="tttCtrl.restart()">
 		
 	</body>
 </html>
