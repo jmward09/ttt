@@ -1,11 +1,10 @@
 var tttApp = angular.module('tttApp', []);
 
-tttApp.controller('tttController', function () {
+tttApp.controller('tttController', function() {
   var self = this;
   self.winner= 'Unkown';
   self.turns = 0;
   self.squares =[0, 0, 0, 0, 0, 0, 0, 0, 0];
-  //self.checkWinner=checkWinner;
   self.makeMove = function(x){
   	if(self.squares[x] == 0){
   		if(self.turns%2 == 0){
@@ -13,7 +12,7 @@ tttApp.controller('tttController', function () {
   	  	}else{
   	  		self.squares[x] = 5;
   	  	}
-  	  	if(self.turns>8){self.winner = 'The Cat';
+  	  	if(self.turns>7){self.winner = 'The Cat';
   	  	}else if(self.turns>3){
   	  			if(self.squares[0]==self.squares[1]&&self.squares[1]==self.squares[2] && self.squares[0]!=0){
   	  				if(self.squares[0]==1){
@@ -51,9 +50,11 @@ tttApp.controller('tttController', function () {
   	  		}
   	  	self.turns++;
   	  }
+  	}
   	self.restart = function(){
   		self.turns = 0;
   		self.squares =[0, 0, 0, 0, 0, 0, 0, 0, 0];
   		self.winner = "Unkown";
   	}
+
 });
