@@ -6,7 +6,7 @@
 	margin:0;
 	padding:0;
 }
-.square {
+.empty {
 	height:120px;
 	width:120px;
 	display:inline-block;
@@ -38,4 +38,20 @@ h2 {
 }
 #cat{
 	color:green;
+}
+.X {
+	height:120px;
+	width:120px;
+	display:inline-block;
+	margin:10px;
+	padding:0;
+	background: url(../images/tttX.png);
+}
+.O {
+	height:120px;
+	width:120px;
+	display:inline-block;
+	margin:10px;
+	padding:0;
+	background: url(../images/tttO.png);
 }
